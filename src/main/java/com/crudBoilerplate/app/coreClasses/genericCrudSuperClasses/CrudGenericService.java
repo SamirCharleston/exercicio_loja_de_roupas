@@ -7,13 +7,14 @@ import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.*;
 
 @Transactional
 public abstract class CrudGenericService<
         Entity extends CrudGenericEntity,
-        Repository extends CrudGenericRepository<Entity>,
+        Repository extends JpaRepository<Entity, UUID>,
         DTOIn extends CrudGenericDTOIn,
         DTOOut
         > implements CrudStandardServiceMethods<

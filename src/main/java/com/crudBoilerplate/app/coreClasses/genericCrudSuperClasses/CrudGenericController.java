@@ -12,7 +12,7 @@ import java.util.UUID;
 public abstract class CrudGenericController <
         Entity extends CrudGenericEntity,
         Service extends CrudGenericService<Entity, Repository, DTOIn, DTOOut>,
-        Repository extends CrudGenericRepository<Entity>,
+        Repository extends org.springframework.data.jpa.repository.JpaRepository<Entity, UUID>,
         DTOIn extends CrudGenericDTOIn,
         DTOOut
         >{
