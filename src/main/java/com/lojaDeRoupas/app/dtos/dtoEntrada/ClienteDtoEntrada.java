@@ -3,6 +3,7 @@ package com.lojaDeRoupas.app.dtos.dtoEntrada;
 import com.lojaDeRoupas.app.config.messageHandling.errorMessages.ValidationErrorMessages;
 import com.lojaDeRoupas.app.coreClasses.genericCrudSuperClasses.CrudGenericDTOIn;
 import com.lojaDeRoupas.app.entities.VendaEntity;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;

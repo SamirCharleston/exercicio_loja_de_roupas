@@ -1,5 +1,6 @@
 package com.lojaDeRoupas.app.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.lojaDeRoupas.app.coreClasses.genericCrudSuperClasses.CrudGenericEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -26,6 +27,6 @@ public class ClienteEntity extends CrudGenericEntity {
     @Column(nullable = false, length = 30)
     private String telefone;
     @OneToMany(cascade = CascadeType.ALL)
-    @JsonIgnore
+    @JsonIgnoreProperties("cliente")
     private List<VendaEntity> vendas;
 }

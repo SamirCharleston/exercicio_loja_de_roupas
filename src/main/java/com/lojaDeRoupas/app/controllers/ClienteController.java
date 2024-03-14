@@ -20,8 +20,4 @@ public class ClienteController extends CrudGenericController<
         ClienteRepository,
         ClienteDtoEntrada,
         ClienteDtoSaida> {
-//    public ResponseEntity<ResponseWrapper<ClienteDtoSaida>>
-//    buscarPorEndereco(@RequestParam("endereco") String endereco){
-//
-//    }
 }
