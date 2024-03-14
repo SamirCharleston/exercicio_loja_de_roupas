@@ -9,7 +9,10 @@ public abstract class ValidationErrorMessages {
     public static final String CPF = "This field must contain a valid CPF.";
     public static final String TELEPHONE = "This field must contain a telephone number.";
     public static final String NAME = "This field is for a name, so it supports only spaces and alphabetic characters.";
+    public static final String INVALID_CPF = "This field must contain a valid cpf number.";
+
     public static final String MAX_10 = "This field must contain a maximum of 10 characters.";
+    public static final String MAX_15 = "This field must contain a maximum of 15 characters.";
     public static final String MAX_20 = "This field must contain a maximum of 20 characters.";
     public static final String MAX_30 = "This field must contain a maximum of 30 characters.";
     public static final String MAX_50 = "This field must contain a maximum of 50 characters.";
