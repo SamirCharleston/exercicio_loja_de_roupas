@@ -5,6 +5,7 @@ import com.lojaDeRoupas.app.controllers.VendaController;
 import com.lojaDeRoupas.app.coreClasses.ResponseWrapper;
 import com.lojaDeRoupas.app.dtos.dtoEntrada.VendaDtoEntrada;
 import com.lojaDeRoupas.app.dtos.dtoSaida.VendaDtoSaida;
+import com.lojaDeRoupas.app.repositories.VendaRepository;
 import com.lojaDeRoupas.app.service.VendaService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -23,6 +24,8 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 public class VendaControllerTest {
     @Mock
+    private VendaRepository vendaRepository;
+    @Autowired
     private VendaService vendaService;
 
     @Autowired
