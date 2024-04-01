@@ -3,6 +3,7 @@ package com.lojaDeRoupas.app.dtos.dtoEntrada;
 import com.lojaDeRoupas.app.config.messageHandling.errorMessages.ValidationErrorMessages;
 import com.lojaDeRoupas.app.coreClasses.genericCrudSuperClasses.CrudGenericDTOIn;
 import com.lojaDeRoupas.app.entities.VendaEntity;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -29,5 +30,5 @@ public class FuncionarioDtoEntrada extends CrudGenericDTOIn {
     @NotNull(message = ValidationErrorMessages.NOT_NULL)
     @Positive(message = ValidationErrorMessages.POSITIVE)
     private Long matricula;
-    private List<VendaEntity> vendas;
+    private List<@Valid VendaDtoEntrada> vendas;
 }

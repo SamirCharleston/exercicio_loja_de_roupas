@@ -19,7 +19,7 @@ public abstract class CrudGenericController <
     @Autowired
     Service service;
     @PostMapping(CrudGenericEndPointName.REGISTER)
-    private ResponseEntity<ResponseWrapper<String>>
+    public ResponseEntity<ResponseWrapper<String>>
     register(@RequestBody @Valid DTOIn object){
 
         ResponseWrapper<String> response = new ResponseWrapper<>();
@@ -33,9 +33,9 @@ public abstract class CrudGenericController <
         }
     }
     @GetMapping(CrudGenericEndPointName.FIND)
-    private ResponseEntity<ResponseWrapper<List<DTOOut>>>
+    public ResponseEntity<ResponseWrapper<List<DTOOut>>>
     find(@RequestParam("quantity") Long quantity,
-           @RequestParam("order") String order) {
+         @RequestParam("order") String order) {
 
         ResponseWrapper<List<DTOOut>> response = new ResponseWrapper<>();
 
@@ -48,8 +48,8 @@ public abstract class CrudGenericController <
         }
     }
     @GetMapping(CrudGenericEndPointName.FIND_BY_ID)
-    private ResponseEntity<ResponseWrapper<DTOOut>>
-    findById(@RequestParam("id")UUID id) {
+    public ResponseEntity<ResponseWrapper<DTOOut>>
+    findById(@RequestParam("id") UUID id) {
 
         ResponseWrapper<DTOOut> response = new ResponseWrapper<>();
 
@@ -62,7 +62,7 @@ public abstract class CrudGenericController <
         }
     }
     @PutMapping(CrudGenericEndPointName.UPDATE)
-    private ResponseEntity<ResponseWrapper<String>>
+    public ResponseEntity<ResponseWrapper<String>>
     update(@RequestBody @Valid DTOIn object) {
 
         ResponseWrapper<String> response = new ResponseWrapper<>();
@@ -76,7 +76,7 @@ public abstract class CrudGenericController <
         }
     }
     @DeleteMapping(CrudGenericEndPointName.DELETE)
-    private ResponseEntity<ResponseWrapper<String>>
+    public ResponseEntity<ResponseWrapper<String>>
     delete(@RequestParam("id") UUID id) {
 
         ResponseWrapper<String> response = new ResponseWrapper<>();

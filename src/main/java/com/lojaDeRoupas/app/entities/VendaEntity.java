@@ -18,6 +18,8 @@ import java.util.List;
 @NoArgsConstructor
 public class VendaEntity extends CrudGenericEntity {
     @Column
+    private String statusDaVenda;
+    @Column
     private String enderecoDaEntrega;
     @Column(nullable = false)
     private BigDecimal valorTotal;

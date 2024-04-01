@@ -37,5 +37,5 @@ public class ClienteDtoEntrada extends CrudGenericDTOIn {
     @Size(max = 15, message = ValidationErrorMessages.MAX_15)
     @NotBlank(message = ValidationErrorMessages.NOT_BLANK)
     private String telefone;
-    private List<VendaEntity> vendas;
+    private List<@Valid VendaDtoEntrada> vendas;
 }

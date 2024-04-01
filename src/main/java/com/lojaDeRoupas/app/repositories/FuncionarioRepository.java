@@ -10,6 +10,7 @@ import java.util.UUID;
 public interface FuncionarioRepository extends JpaRepository<FuncionarioEntity, UUID> {
     Optional<FuncionarioEntity> findByNome(String nome);
     Optional<FuncionarioEntity> findByMatricula(Long matricula);
+    boolean existsByMatricula(Long matricula);
     @Query("SELECT COUNT(f) > 0 FROM FuncionarioEntity f WHERE f.matricula = :matricula")
     boolean existePorMatricula(Long matricula);
 }

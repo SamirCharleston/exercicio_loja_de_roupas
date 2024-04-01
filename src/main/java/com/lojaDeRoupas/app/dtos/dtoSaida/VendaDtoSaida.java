@@ -18,6 +18,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class VendaDtoSaida {
     private UUID id;
+    private String statusDaVenda;
     private String enderecoDaEntrega;
     private BigDecimal valorTotal;
     private ClienteEntity cliente;
