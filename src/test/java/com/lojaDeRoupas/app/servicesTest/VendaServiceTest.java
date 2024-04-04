@@ -1,4 +1,4 @@
-package com.lojaDeRoupas.app.serviceTest;
+package com.lojaDeRoupas.app.servicesTest;
 
 import com.lojaDeRoupas.app.dtos.dtoEntrada.ProdutoDtoEntrada;
 import com.lojaDeRoupas.app.dtos.dtoEntrada.VendaDtoEntrada;

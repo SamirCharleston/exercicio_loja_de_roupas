@@ -38,7 +38,7 @@ public class ClienteService extends CrudGenericService<
 
     @Override
     public String update(ClienteDtoEntrada objectIn) throws Exception {
-        return genericRegister(objectIn, ClienteEntity.class);
+        return genericUpdate(objectIn, ClienteEntity.class);
     }
 
     @Override
