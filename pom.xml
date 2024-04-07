@@ -91,6 +91,18 @@
 						<goals>
 							<goal>report</goal>
 						</goals>
+						<configuration>
+							<excludes>
+								<exclude>com/lojaDeRoupas/app/config/messageHandling/successMessages/**</exclude>
+								<exclude>com/lojaDeRoupas/app/config/messageHandling/errorMessages/**</exclude>
+								<exclude>com/lojaDeRoupas/app/config/validations/**</exclude>
+								<exclude>com/lojaDeRoupas/app/config/customExceptions/**</exclude>
+								<exclude>com/lojaDeRoupas/app/config/exceptionsControl/**</exclude>
+								<exclude>com/lojaDeRoupas/app/coreClasses/userAutentication/**</exclude>
+								<exclude>com/lojaDeRoupas/app/coreClasses/**</exclude>
+								<exclude>com/lojaDeRoupas/app/dtos/dtoSaida/**</exclude>
+							</excludes>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
