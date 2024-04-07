@@ -9,6 +9,7 @@ public abstract class ExceptionMessages {
     public static final String USER_LIST_NOT_FOUND = "User list" + CANT_BE_FOUND;
     public static final String LIST_NOT_FOUND = "List" + CANT_BE_FOUND;
     public static final String ENTITY_NOT_FOUND = "Entity" + CANT_BE_FOUND;
+    public static final String ENTITY_DISABLED = "This enttity is disabled";
     public static final String ENTITY_ALREADY_EXISTS = "This entity is already registered.";
     public static final String ID_ALREADY_REGISTERED = "This ID already exists";
     public static final String NULL_ENTITY = "Entity can't be null";

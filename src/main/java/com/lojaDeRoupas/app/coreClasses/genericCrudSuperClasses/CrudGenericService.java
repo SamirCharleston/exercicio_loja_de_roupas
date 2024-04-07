@@ -53,7 +53,7 @@ public abstract class CrudGenericService<
         Entity entity = this.repository.getReferenceById(id);
 
         if(!entity.isStatus())
-            throw new EntityNotFoundException(ExceptionMessages.ENTITY_NOT_FOUND);
+            throw new EntityNotFoundException(ExceptionMessages.ENTITY_DISABLED);
 
         return modelMapper.map(entity, dtoOutClass);
     }
@@ -65,7 +65,7 @@ public abstract class CrudGenericService<
         List<Entity> entities;
 
         if(order != null && order.equals("DESC"))
-            entities = this.repository.findAll(Sort.by(Sort.Direction.DESC));
+            entities = this.repository.findAll(Sort.by(Sort.Direction.DESC, "id"));
         else
             entities = this.repository.findAll();
 
