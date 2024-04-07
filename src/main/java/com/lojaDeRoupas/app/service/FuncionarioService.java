@@ -38,7 +38,7 @@ public class FuncionarioService extends CrudGenericService<
 
     @Override
     public String update(FuncionarioDtoEntrada objectIn) throws Exception {
-        return genericRegister(objectIn, FuncionarioEntity.class);
+        return genericUpdate(objectIn, FuncionarioEntity.class);
     }
 
     @Override
